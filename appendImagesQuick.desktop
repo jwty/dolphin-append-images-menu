@@ -1,0 +1,15 @@
+# Append images vertically and save to the same directory or /tmp if access denied
+#
+# Dependencies:
+# * imagemagick
+
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/png;image/jpeg;
+Actions=appendImagesQuick;
+
+[Desktop Action appendImagesQuick]
+Name=Append images (quick)
+Icon=view-split-top-bottom
+Exec=/bin/bash -c 'convert -append "${@}" appended-$(date +%s).jpg | convert -append "${@}" /tmp/appended-$(date +%s)' bash %F

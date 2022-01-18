@@ -1,0 +1,22 @@
+# Append images vertically or horizontally and save with file save dialog
+#
+# Dependencies:
+# * imagemagick
+# * kdialog
+
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/png;image/jpeg;
+Actions=1appendImagesVertically;2appendImagesHorizontally;
+X-KDE-Submenu=Append images
+
+[Desktop Action 1appendImagesVertically]
+Name=Vertically & Save as...
+Icon=view-split-top-bottom
+Exec=/bin/bash -c 'SAVEPATH=$(kdialog --getsavefilename "%k") && convert -append "${@}" ${SAVEPATH}' bash %F
+
+[Desktop Action 2appendImagesHorizontally]
+Name=Horizontally & Save as...
+Icon=view-split-left-right
+Exec=/bin/bash -c 'SAVEPATH=$(kdialog --getsavefilename "%k") && convert +append "${@}" ${SAVEPATH}' bash %F
