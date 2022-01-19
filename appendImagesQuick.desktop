@@ -11,5 +11,6 @@ Actions=appendImagesQuick;
 
 [Desktop Action appendImagesQuick]
 Name=Append images (quick)
+Name[nl]=Oriëntatie aanpassen (snel)
 Icon=view-split-top-bottom
 Exec=/bin/bash -c 'convert -append "${@}" appended-$(date +%s).jpg | convert -append "${@}" /tmp/appended-$(date +%s)' bash %F
