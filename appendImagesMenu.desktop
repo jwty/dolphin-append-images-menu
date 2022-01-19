@@ -10,13 +10,14 @@ X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/png;image/jpeg;
 Actions=1appendImagesVertically;2appendImagesHorizontally;
 X-KDE-Submenu=Append images
+X-KDE-Submenu[nl]=Oriëntatie aanpassen
 
 [Desktop Action 1appendImagesVertically]
-Name=Vertically & Save as...
+Name=Verticaal op&laan als…
 Icon=view-split-top-bottom
 Exec=/bin/bash -c 'SAVEPATH=$(kdialog --getsavefilename "%k") && convert -append "${@}" ${SAVEPATH}' bash %F
 
 [Desktop Action 2appendImagesHorizontally]
-Name=Horizontally & Save as...
+Name=Horizontaal op&slaan als…
 Icon=view-split-left-right
 Exec=/bin/bash -c 'SAVEPATH=$(kdialog --getsavefilename "%k") && convert +append "${@}" ${SAVEPATH}' bash %F
