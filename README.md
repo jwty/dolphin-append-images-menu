@@ -19,10 +19,9 @@ cp *.desktop ~/.local/share/kservices5/ServiceMenus/
 cp appendImagesQuick.desktop ~/.local/share/kservices5/ServiceMenus/
 ```
 
-Or install from KDE Store:
+Or install from KDE Store (available directly in Dolphin in `Settings -> Configure Dolphin... -> Context Menu -> Download New Services...`):
 - [Append images - quick](https://store.kde.org/p/1686267)
 - [Append images - save as](https://store.kde.org/p/1686268)
-
 
 ## Usage
 
@@ -33,3 +32,7 @@ This menu option will try to append selected images vertically (top to bottom) a
 ### appendImagesMenu.desktop
 
 Submenu with options for appending images vertically (top to bottom) or horizontally (left to right). After selecting orientation a file save dialog will be opened and a path and file name to save resulting image can be selected.
+
+## Contributions
+
+* Dutch translation provided by [Vistaus](https://github.com/Vistaus)
